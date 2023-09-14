@@ -1,0 +1,172 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: left;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-left: 100px;
+    width: 50%;
+}
+
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.avatar {
+    width: 350px;
+    height: 350px;
+}
+.goo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.title, details {
+    text-align: start;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 60%;
+}
+
+.forget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forgetPass {
+    text-decoration: none;
+    color: black;
+}
+
+.loginEmail {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: solid black 1px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .google {
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: solid black 1px;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .forms {
+    width: 60%;
+  }
+
+  .invalid input {
+    border-color: #d93025;
+  }
+  .input-field {
+    position: absolute;
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+  }
+  .field .error {
+    display: flex;
+    align-items: center;
+    color: #d93025;
+    font-size: 13px;
+    display: none;
+  }
+  .invalid .error {
+    display: flex;
+  }
+  .error .error-icon {
+    margin-right: 6px;
+    font-size: 15px;
+  }
+  .create-password .email .error {
+    align-items: flex-start;
+  }
+  .create-password .error-icon {
+    margin-top: 4px;
+  }
+
+  .input-field {
+    position: relative;
+    height: 50px;
+    width: 90%;
+    margin-top: 10px;
+  }
+  .input-field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0 15px;
+    border: 1px solid #d1d1d1;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-left: 100px;
+    width: 50%;
+  }
+  .container form {
+    margin-top: 30px;
+  }

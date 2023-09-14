@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <title>Authentication</title>
+
+    <script src="https://kit.fontawesome.com/f6777e9957.js"></script>
+
+</head>
+
+<body>
+    
+    <section class="main-section">
+        <section class="container">
+            <h1 class="title">Signup</h1>
+    
+            <form class="forms">
+                  <div class="field email-field">
+                    <div class="input-field">
+                      <input type="email" placeholder="Enter your email" class="email" />
+                    </div>
+                    <span class="error email-error">
+                      <i class="bx bx-error-circle error-icon"></i>
+                      <p class="error-text">Please enter a valid email</p>
+                    </span>
+                  </div>
+                  <div class="field create-password">
+                    <div class="input-field">
+                        <input type="password" placeholder="***********" name="password" class="password">
+                    </div>
+                    <span class="error password-error">
+                      <i class="bx bx-error-circle error-icon"></i>
+                      <p class="error-text">
+                        Please enter atleast 8 charatcer with number, symbol, small and
+                        capital letter.
+                      </p>
+                    </span>
+                  </div>
+                <div class="forget">
+                    <div>
+                        <input type="checkbox" checked="checked" name="remember">
+                        <label>Remember me</label>
+                    </div>
+                </div>
+                <button type="submit" class="button">Sign Up</button>
+                <button type="submit" class="google">
+                    <img src="google.png" alt="" class="goo"/>
+                    <span>Signup with google</span>
+                </button>
+                <p class="new-account">
+                    Already have an account ? <a href="./index.html">Sign In</a>
+                  </p>
+            </form>
+    
+        </section>
+
+        <section class="avatar-section">
+            <img src="avatar.png" alt="" class="avatar">
+        </section>
+    </section>
+
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
