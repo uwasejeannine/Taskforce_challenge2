@@ -1,0 +1,24 @@
+{
+  "name": "taskforce_challenge2",
+  "version": "1.0.0",
+  "description": "> Task-force Challenge 2 is a web page built with HTML, CSS and Javascript. It has a simple authentication example with a login and register form and messages implemented with Websocket.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwasejeannine/Taskforce_challenge2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uwasejeannine/Taskforce_challenge2/issues"
+  },
+  "homepage": "https://github.com/uwasejeannine/Taskforce_challenge2#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}

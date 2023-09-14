@@ -1,0 +1,65 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Chat App</title>
+</head>
+<body>
+    <!-- New input field for user name -->
+    <input id="name-input" autocomplete="off" placeholder="Enter your name" />
+    <button id="join-button">Join</button>
+  
+    <ul id="messages"></ul>
+    <input id="message-input" autocomplete="off" /><button id="send-button">Send</button>
+  
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+  
+      // DOM elements
+      const messages = document.getElementById('messages');
+      const messageInput = document.getElementById('message-input');
+      const sendButton = document.getElementById('send-button');
+      const nameInput = document.getElementById('name-input'); // New input for user name
+      const joinButton = document.getElementById('join-button'); // New button to join with name
+  
+      let userName = ''; // Variable to store the user's name
+  
+      // Event listener for joining with a name
+      joinButton.addEventListener('click', () => {
+        userName = nameInput.value.trim();
+        if (userName !== '') {
+          // Hide name input and join button
+          nameInput.disabled = true;
+          joinButton.disabled = true;
+  
+          // Show message input and send button
+          messageInput.disabled = false;
+          sendButton.disabled = false;
+  
+          // Emit a 'user joined' event to the server
+          socket.emit('user joined', userName);
+        }
+      });
+  
+      // Event listener for sending messages
+      sendButton.addEventListener('click', () => {
+        const message = messageInput.value;
+        if (message !== '') {
+          // Emit a 'chat message' event with user name and message content
+          socket.emit('chat message', { user: userName, message: message });
+          messageInput.value = '';
+        }
+      });
+  
+      // Event listener for receiving messages
+      socket.on('chat message', (data) => {
+        const li = document.createElement('li');
+        li.textContent = `${data.user}: ${data.message}`;
+        messages.appendChild(li);
+      });
+    </script>
+  </body>
+  </html>
